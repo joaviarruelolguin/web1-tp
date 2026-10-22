@@ -8,7 +8,7 @@
 
 body {
   font-family: "Roboto", Arial, sans-serif;
-  background-color: #fff;
+  background-color: #f1f5f9;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
@@ -80,11 +80,12 @@ main {
 .portada {
   text-align: center;
   padding: 4rem 2rem;
-  background-image: url("https://images.unsplash.com/photo-1520531158340-44015069e78e?q=80&w=1572&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D");
-  background-position: bottom;
+  background-image:
+    linear-gradient(rgba(20, 28, 38, 0.75), rgba(20, 28, 38, 0.75)),
+    url("https://images.unsplash.com/photo-1520531158340-44015069e78e?q=80&w=1572&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center bottom;
   border-bottom: 3px solid #ed8936;
-  position: relative;
-  overflow: hidden;
 }
 
 .titulo-portada {
@@ -97,12 +98,14 @@ main {
 
 .subtitulo-portada {
   font-size: 1rem;
+  font-weight: 300;
   color: #ed8936;
   max-width: 600px;
   margin: 0 auto;
 }
 
 /* Carrusel */
+
 .titulo-carrusel {
   font-family: "Playfair Display", Georgia, serif;
   color: #141c26;
@@ -115,69 +118,112 @@ main {
   text-align: center;
 }
 
+.seccion-carrusel::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #ed8936;
+  border-radius: 2px;
+  margin: 2.5rem auto 0;
+}
+
 .contenedor-carrusel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
 }
 
 .visor-carrusel {
+  position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  max-width: 640px;
+  border-radius: 12px;
+  border-bottom: 4px solid #ed8936;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   width: 100%;
 }
 
 .visor-carrusel img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
+}
+
+.visor-carrusel:hover img {
+  transform: scale(1.04);
 }
 
 .boton-carrusel {
-  background-color: #2b6cb0;
-  color: #ffffff;
-  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  font-size: 1.5rem;
+  border: 2px solid #ed8936;
+  background-color: rgba(20, 28, 38, 0.7);
+  color: #ffffff;
+  font-size: 1.3rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease;
-  flex-shrink: 0;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.boton-carrusel-anterior {
+  left: 1rem;
+}
+
+.boton-carrusel-siguiente {
+  right: 1rem;
 }
 
 .boton-carrusel:hover {
-  background-color: #1a365d;
+  background-color: #ed8936;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.boton-carrusel:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
 }
 
 /* Sección sobre nosotros */
 
 .seccion-sobre-nosotros {
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 60%, #fff3e6 100%);
   padding: 2.5rem;
   border-radius: 12px;
-  margin: 2rem 0;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin: 2.5rem 0 3rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   border-left: 5px solid #ed8936;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.titulo-sobre-nosotros {
-  font-family: "Playfair Display", Georgia, serif;
-  color: #1a365d;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+.seccion-sobre-nosotros:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.15);
 }
 
 .descripcion-sobre-nosotros {
   font-size: 1.05rem;
   line-height: 1.8;
   color: #2d3748;
+}
+
+/* Footer */
+.pie-sitio {
+  background-color: #141c26;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
 }

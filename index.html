@@ -17,7 +17,7 @@
 <body>
   <header class="encabezado-sitio">
     <nav class="barra-navegacion" aria-label="Navegación principal">
-      <a href="" class="logo-navegacion">Noti<span>Tech</span></a>
+      <a href="index.html" class="logo-navegacion">Noti<span>Tech</span></a>
       <ul class="menu-navegacion">
         <li><a href="index.html" class="enlace-navegacion activa" aria-current="page">Inicio</a></li>
         <li><a href="noticias.html" class="enlace-navegacion">Noticias</a></li>
@@ -37,8 +37,9 @@
       <div class="contenedor-carrusel">
         <button class="boton-carrusel boton-carrusel-anterior" id="btnAnterior"
           aria-label="Imagen anterior">&#10094;</button>
-        <div class="visor-carrusel">
-          <img id="imagenCarrusel" src="https://picsum.photos/800/400?random=1" alt="Imagen destacada de tecnología 1">
+        <div class="visor-carrusel" aria-live="polite">
+          <img id="imagenCarrusel" src="https://picsum.photos/800/400?random=1" width="800" height="400"
+            alt="Imagen destacada de tecnología 1">
         </div>
         <button class="boton-carrusel boton-carrusel-siguiente" id="btnSiguiente"
           aria-label="Imagen siguiente">&#10095;</button>
@@ -54,6 +55,10 @@
         análisis profundos.</p>
     </section>
   </main>
+
+  <footer class="pie-sitio">
+    <p>&copy; 2026 TechNoticias. Todos los derechos reservados.</p>
+  </footer>
 
   <script src="js/carrusel.js"></script>
 </body>
