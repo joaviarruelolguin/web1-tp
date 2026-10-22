@@ -32,18 +32,39 @@
   </section>
 
   <main>
+
     <section class="seccion-carrusel" aria-label="Carrusel de imágenes destacadas">
       <h2 class="titulo-carrusel">Noticias destacadas</h2>
-      <div class="contenedor-carrusel">
-        <button class="boton-carrusel boton-carrusel-anterior" id="btnAnterior"
-          aria-label="Imagen anterior">&#10094;</button>
-        <div class="visor-carrusel" aria-live="polite">
-          <img id="imagenCarrusel" src="https://picsum.photos/800/400?random=1" width="800" height="400"
-            alt="Imagen destacada de tecnología 1">
+      <div class="fila-destacados">
+        <div class="contenedor-carrusel">
+          <button class="boton-carrusel boton-carrusel-anterior" id="btnAnterior"
+            aria-label="Imagen anterior">&#10094;</button>
+          <div class="visor-carrusel" aria-live="polite">
+            <img id="imagenCarrusel" src="https://picsum.photos/800/400?random=1" width="800" height="400"
+              alt="Imagen destacada de tecnología 1">
+          </div>
+          <button class="boton-carrusel boton-carrusel-siguiente" id="btnSiguiente"
+            aria-label="Imagen siguiente">&#10095;</button>
         </div>
-        <button class="boton-carrusel boton-carrusel-siguiente" id="btnSiguiente"
-          aria-label="Imagen siguiente">&#10095;</button>
+        <aside class="columna-lateral" aria-label="Artículos recomendados">
+          <article class="articulo-lateral">
+            <img src="https://picsum.photos/400/250?random=3" width="400" height="250" alt="Código en una pantalla">
+            <div class="texto-articulo-lateral">
+              <span class="categoria-articulo">Programación</span>
+              <h3 class="titulo-articulo-lateral"><a href="noticias.html">Título del primer artículo</a></h3>
+            </div>
+          </article>
+
+          <article class="articulo-lateral">
+            <img src="https://picsum.photos/400/250?random=4" width="400" height="250" alt="Circuito electrónico">
+            <div class="texto-articulo-lateral">
+              <span class="categoria-articulo">Innovación</span>
+              <h3 class="titulo-articulo-lateral"><a href="noticias.html">Título del segundo artículo</a></h3>
+            </div>
+          </article>
+        </aside>
       </div>
+
     </section>
 
     <section class="seccion-sobre-nosotros">
