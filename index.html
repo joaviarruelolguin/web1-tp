@@ -31,8 +31,23 @@
       <h1 class="titulo-portada">Las últimas noticias del mundo tecnológico</h1>
       <p class="subtitulo-portada">Mantente al día con las tendencias en desarrollo web, programación e innovación.</p>
     </section>
+
+    <section class="seccion-carrusel" aria-label="Carrusel de imágenes destacadas">
+      <h2 class="titulo-carrusel">Noticias destacadas</h2>
+      <div class="contenedor-carrusel">
+        <button class="boton-carrusel boton-carrusel-anterior" id="btnAnterior"
+          aria-label="Imagen anterior">&#10094;</button>
+        <div class="visor-carrusel">
+          <img id="imagenCarrusel" src="https://picsum.photos/800/400?random=1" alt="Imagen destacada de tecnología 1">
+        </div>
+        <button class="boton-carrusel boton-carrusel-siguiente" id="btnSiguiente"
+          aria-label="Imagen siguiente">&#10095;</button>
+      </div>
+
+    </section>
   </main>
 
+  <script src="js/carrusel.js"></script>
 </body>
 
 </html>
