@@ -515,6 +515,14 @@ main {
     max-width: 400px;
     min-height: 220px;
   }
+
+  .tarjeta-noticia {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .contenido-principal {
+    padding: 1rem;
+  }
 }
 
 /* Celular */
