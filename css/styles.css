@@ -461,6 +461,13 @@ main {
   line-height: 1.6;
 }
 
+/* Página de contacto */
+
+.seccion-formulario {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 /* Footer */
 .pie-sitio {
   background-color: var(--color-oscuro);
