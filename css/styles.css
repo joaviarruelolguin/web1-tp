@@ -319,10 +319,10 @@ main {
 
 .contenedor-caracteristicas {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: center;
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 1.5rem 0 1.5rem 0;
 }
 
 .tarjeta-caracteristica {
