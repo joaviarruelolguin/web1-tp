@@ -1,4 +1,4 @@
-// Array con las rutas de las imágenes del carrusel
+//Array con imagenes del carrusel
 
 const imagenesCarrusel = [
   {
@@ -26,25 +26,22 @@ const imagenesCarrusel = [
 let indiceActual = 0;
 
 // Referencias a elementos del DOM
+
 const imagenCarrusel = document.getElementById("imagenCarrusel");
 const btnAnterior = document.getElementById("btnAnterior");
 const btnSiguiente = document.getElementById("btnSiguiente");
 
-// Actualiza la imagen visible en el carrusel según el índice actual.
+// Funcion actualizarImagen
 
 function actualizarImagen() {
   imagenCarrusel.src = imagenesCarrusel[indiceActual].url;
   imagenCarrusel.alt = imagenesCarrusel[indiceActual].alt;
 }
 
-// Avanza a la siguiente imagen. Si está en la última, vuelve a la primera (circular).
-
 function avanzar() {
   indiceActual = (indiceActual + 1) % imagenesCarrusel.length;
   actualizarImagen();
 }
-
-// Retrocede a la imagen anterior. Si está en la primera, va a la última (circular).
 
 function retroceder() {
   indiceActual =
@@ -52,9 +49,9 @@ function retroceder() {
   actualizarImagen();
 }
 
-// Event listeners para los botones del carrusel
+// Event listeners
 btnAnterior.addEventListener("click", retroceder);
 btnSiguiente.addEventListener("click", avanzar);
 
-// Inicialización del carrusel
+// Inicialización
 actualizarImagen();
