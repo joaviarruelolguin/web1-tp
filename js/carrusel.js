@@ -1,5 +1,3 @@
-//Array con imagenes del carrusel
-
 const imagenesCarrusel = [
   {
     url: "https://picsum.photos/800/400?random=1",
@@ -25,13 +23,9 @@ const imagenesCarrusel = [
 
 let indiceActual = 0;
 
-// Referencias a elementos del DOM
-
 const imagenCarrusel = document.getElementById("imagenCarrusel");
 const btnAnterior = document.getElementById("btnAnterior");
 const btnSiguiente = document.getElementById("btnSiguiente");
-
-// Funcion actualizarImagen
 
 function actualizarImagen() {
   imagenCarrusel.src = imagenesCarrusel[indiceActual].url;
@@ -49,9 +43,7 @@ function retroceder() {
   actualizarImagen();
 }
 
-// Event listeners
 btnAnterior.addEventListener("click", retroceder);
 btnSiguiente.addEventListener("click", avanzar);
 
-// Inicialización
 actualizarImagen();
