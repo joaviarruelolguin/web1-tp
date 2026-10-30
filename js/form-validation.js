@@ -64,3 +64,20 @@ function validarEmail() {
   limpiarError("email");
   return true;
 }
+
+function validarTelefono() {
+  const elemento = document.getElementById("telefono");
+  const valor = limpiarEspacios(elemento.value);
+
+  if (valor === "") {
+    mostrarError("telefono", "El teléfono es obligatorio.");
+    return false;
+  }
+  if (!regexTelefono.test(valor)) {
+    mostrarError("telefono", "Ingresa un número de teléfono válido.");
+    return false;
+  }
+
+  limpiarError("telefono");
+  return true;
+}
