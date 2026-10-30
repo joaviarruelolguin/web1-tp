@@ -47,3 +47,20 @@ function validarNombre() {
   limpiarError("nombre");
   return true;
 }
+
+function validarEmail() {
+  const elemento = document.getElementById("email");
+  const valor = limpiarEspacios(elemento.value);
+
+  if (valor === "") {
+    mostrarError("email", "El correo electrónico es obligatorio.");
+    return false;
+  }
+  if (!regexEmail.test(valor)) {
+    mostrarError("email", "Ingresa un correo electrónico válido.");
+    return false;
+  }
+
+  limpiarError("email");
+  return true;
+}
