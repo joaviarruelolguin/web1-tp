@@ -22,3 +22,28 @@ function limpiarError(campo) {
     spanError.textContent = "";
   }
 }
+
+function validarNombre() {
+  const elemento = document.getElementById("nombre");
+  const valor = limpiarEspacios(elemento.value);
+
+  if (valor === "") {
+    mostrarError("nombre", "El nombre es obligatorio.");
+    return false;
+  }
+  if (valor.length < 3) {
+    mostrarError("nombre", "El nombre debe tener al menos 3 caracteres.");
+    return false;
+  }
+  if (valor.length > 50) {
+    mostrarError("nombre", "El nombre no debe superar los 50 caracteres.");
+    return false;
+  }
+  if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]+$/.test(valor)) {
+    mostrarError("nombre", "El nombre solo puede contener letras y espacios.");
+    return false;
+  }
+
+  limpiarError("nombre");
+  return true;
+}
