@@ -11,3 +11,14 @@ const regexTelefono = /^[\d\s\-+()]{7,20}$/;
 function limpiarEspacios(valor) {
   return valor.trim().replace(/\s+/g, " ");
 }
+
+function limpiarError(campo) {
+  const elemento = document.getElementById(campo);
+  const spanError = document.getElementById("error-" + campo);
+  if (elemento) {
+    elemento.classList.remove("error");
+  }
+  if (spanError) {
+    spanError.textContent = "";
+  }
+}
