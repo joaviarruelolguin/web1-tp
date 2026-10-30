@@ -468,6 +468,29 @@ main {
   margin: 0 auto;
 }
 
+.formulario-contacto {
+  background-color: var(--color-tarjeta);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.grupo-formulario {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.grupo-formulario label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--color-primario);
+}
+
+.obligatorio {
+  color: var(--color-error);
+}
+
 /* Footer */
 .pie-sitio {
   background-color: var(--color-oscuro);
