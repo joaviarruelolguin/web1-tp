@@ -81,3 +81,29 @@ function validarTelefono() {
   limpiarError("telefono");
   return true;
 }
+
+function mostrarResumen(datos) {
+  contenidoResumen.innerHTML = "";
+
+  Object.entries(datos).forEach(([etiqueta, valor]) => {
+    const parrafo = document.createElement("p");
+    parrafo.classList.add("dato-resumen");
+
+    const strong = document.createElement("strong");
+    strong.textContent = etiqueta + ": ";
+
+    parrafo.appendChild(strong);
+    parrafo.appendChild(document.createTextNode(valor));
+    contenidoResumen.appendChild(parrafo);
+  });
+
+  formulario.style.display = "none";
+  resumenEnvio.style.display = "block";
+}
+
+function reiniciarFormulario() {
+  formulario.reset();
+  formulario.style.display = "block";
+  resumenEnvio.style.display = "none";
+  contenidoResumen.innerHTML = "";
+}
