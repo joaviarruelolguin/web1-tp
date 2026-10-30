@@ -5,6 +5,8 @@
   --color-enlace-activo: #2b6cb0;
   --color-texto: #2d3748;
   --color-blanco: #ffffff;
+  --color-error: #e53e3e;
+  --color-primario: #1a365d;
 }
 
 *,
@@ -278,7 +280,7 @@ main {
 
 .titulo-sobre-nosotros {
   font-family: "Playfair Display", Georgia, serif;
-  color: #1a365d;
+  color: var(--color-primario);
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
@@ -469,7 +471,7 @@ main {
 }
 
 .formulario-contacto {
-  background-color: var(--color-tarjeta);
+  background-color: var(--color-blanco);
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -489,6 +491,48 @@ main {
 
 .obligatorio {
   color: var(--color-error);
+}
+
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 4px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario select:focus,
+.grupo-formulario textarea:focus {
+  outline: none;
+  border-color: var(--color-enlace-activo);
+}
+
+.mensaje-error {
+  color: var(--color-error);
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  min-height: 1.2em;
+}
+
+.boton-enviar {
+  background-color: var(--color-enlace-activo);
+  color: #ffffff;
+  border: none;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.boton-enviar:hover {
+  background-color: var(--color-primario);
 }
 
 /* Footer */
