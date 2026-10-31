@@ -540,6 +540,37 @@ main {
   background-color: var(--color-primario);
 }
 
+/* Resumen envío */
+
+.resumen-envio {
+  background-color: var(--color-blanco);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.resumen-envio h2 {
+  color: #38a169;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.resumen-envio .dato-resumen {
+  text-align: left;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.resumen-envio .dato-resumen:last-of-type {
+  border-bottom: none;
+}
+
+.resumen-envio .etiqueta-resumen {
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
 /* Footer */
 .pie-sitio {
   background-color: var(--color-oscuro);
