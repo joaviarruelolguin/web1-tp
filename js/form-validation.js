@@ -12,6 +12,17 @@ function limpiarEspacios(valor) {
   return valor.trim().replace(/\s+/g, " ");
 }
 
+function mostrarError(campo, mensaje) {
+  const elemento = document.getElementById(campo);
+  const spanError = document.getElementById("error-" + campo);
+  if (elemento) {
+    elemento.classList.add("error");
+  }
+  if (spanError) {
+    spanError.textContent = mensaje;
+  }
+}
+
 function limpiarError(campo) {
   const elemento = document.getElementById(campo);
   const spanError = document.getElementById("error-" + campo);
@@ -82,6 +93,27 @@ function validarTelefono() {
   return true;
 }
 
+function validarMensaje() {
+  const elemento = document.getElementById("mensaje");
+  const valor = limpiarEspacios(elemento.value);
+
+  if (valor === "") {
+    mostrarError("mensaje", "El mensaje es obligatorio.");
+    return false;
+  }
+  if (valor.length < 10) {
+    mostrarError("mensaje", "El mensaje debe tener al menos 10 caracteres.");
+    return false;
+  }
+  if (valor.length > 500) {
+    mostrarError("mensaje", "El mensaje no debe superar los 500 caracteres.");
+    return false;
+  }
+
+  limpiarError("mensaje");
+  return true;
+}
+
 function mostrarResumen(datos) {
   contenidoResumen.innerHTML = "";
 
@@ -107,3 +139,34 @@ function reiniciarFormulario() {
   resumenEnvio.style.display = "none";
   contenidoResumen.innerHTML = "";
 }
+
+formulario.addEventListener("submit", function (evento) {
+  evento.preventDefault();
+
+  const esNombreValido = validarNombre();
+  const esEmailValido = validarEmail();
+  const esTelefonoValido = validarTelefono();
+  const esMensajeValido = validarMensaje();
+
+  if (esNombreValido && esEmailValido && esTelefonoValido && esMensajeValido) {
+    const datos = {
+      Nombre: limpiarEspacios(document.getElementById("nombre").value),
+      "Correo electrónico": limpiarEspacios(
+        document.getElementById("email").value,
+      ),
+      Teléfono: limpiarEspacios(document.getElementById("telefono").value),
+      Asunto: document.getElementById("asunto").selectedOptions[0].textContent,
+      Mensaje: limpiarEspacios(document.getElementById("mensaje").value),
+    };
+
+    mostrarResumen(datos);
+  }
+});
+
+["nombre", "email", "telefono", "mensaje"].forEach(function (campo) {
+  document.getElementById(campo).addEventListener("input", function () {
+    limpiarError(campo);
+  });
+});
+
+botonNuevoEnvio.addEventListener("click", reiniciarFormulario);

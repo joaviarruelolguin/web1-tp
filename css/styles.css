@@ -511,6 +511,11 @@ main {
   border-color: var(--color-enlace-activo);
 }
 
+.grupo-formulario input.error,
+.grupo-formulario textarea.error {
+  border-color: var(--color-error);
+}
+
 .mensaje-error {
   color: var(--color-error);
   font-size: 0.85rem;
