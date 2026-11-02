@@ -6,7 +6,7 @@ Sitio web de noticias sobre tecnología, programación y desarrollo web. Es el T
 
 **Estudiante:** Joaquín Viarruel
 
-**Sitio publicado:**
+**Sitio publicado:** https://joaviarruelolguin.github.io/web1-tp/
 
 **Repositorio:** https://github.com/joaviarruelolguin/web1-tp
 
