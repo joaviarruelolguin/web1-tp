@@ -6,7 +6,7 @@ const botonNuevoEnvio = document.getElementById("boton-nuevo-envio");
 
 // Expresiones regulares para validación
 const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const regexTelefono = /^[\d\s\-+()]{7,20}$/;
+const regexTelefono = /^\+?(?:[\s\-()]*\d){7,15}[\s\-()]*$/;
 
 function limpiarEspacios(valor) {
   return valor.trim().replace(/\s+/g, " ");
