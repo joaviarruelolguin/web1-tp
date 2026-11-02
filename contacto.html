@@ -37,20 +37,22 @@
       <form id="formulario-contacto" class="formulario-contacto" novalidate>
         <div class="grupo-formulario">
           <label for="nombre">Nombre completo <span class="obligatorio">*</span></label>
-          <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required minlength="3"
-            maxlength="50">
+          <input type="text" id="nombre" name="nombre" aria-describedby="error-nombre" placeholder="Ingresa tu nombre"
+            required minlength="3" maxlength="50">
           <span class="mensaje-error" id="error-nombre" role="alert"></span>
         </div>
 
         <div class="grupo-formulario">
           <label for="email">Correo electrónico <span class="obligatorio">*</span></label>
-          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+          <input type="email" id="email" name="email" aria-describedby="error-email" placeholder="correo@ejemplo.com"
+            required>
           <span class="mensaje-error" id="error-email" role="alert"></span>
         </div>
 
         <div class="grupo-formulario">
           <label for="telefono">Teléfono <span class="obligatorio">*</span></label>
-          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 1234-5678" required>
+          <input type="tel" id="telefono" name="telefono" aria-describedby="error-telefono"
+            placeholder="Ej: 11 1234-5678" required>
           <span class="mensaje-error" id="error-telefono" role="alert"></span>
         </div>
 
@@ -66,14 +68,14 @@
 
         <div class="grupo-formulario">
           <label for="mensaje">Mensaje <span class="obligatorio">*</span></label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required
-            minlength="10" maxlength="500"></textarea>
+          <textarea id="mensaje" name="mensaje" aria-describedby="error-mensaje" rows="5"
+            placeholder="Escribe tu mensaje aquí..." required minlength="10" maxlength="500"></textarea>
           <span class="mensaje-error" id="error-mensaje" role="alert"></span>
         </div>
 
         <button type="submit" class="boton-enviar">Enviar mensaje</button>
       </form>
-      <div id="resumen-envio" class="resumen-envio" style="display: none;">
+      <div id="resumen-envio" class="resumen-envio" hidden>
         <h2>Datos enviados correctamente</h2>
         <div id="contenido-resumen"></div>
         <button type="button" id="boton-nuevo-envio" class="boton-enviar">Enviar otro mensaje</button>
