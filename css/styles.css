@@ -572,12 +572,39 @@ main {
 }
 
 /* Footer */
-.pie-sitio {
+.pie-contenedor {
   background-color: var(--color-oscuro);
   color: var(--color-blanco);
   text-align: center;
   padding: 1.5rem;
   margin-top: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.lista-navegacion {
+  list-style: none;
+  text-align: center;
+  display: flex;
+}
+
+.item-navegacion {
+  margin-left: 2rem;
+}
+
+.item-navegacion a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-blanco);
+}
+
+.item-navegacion a:hover {
+  color: var(--color-acento);
+}
+
+.pie-logo {
+  text-align: start;
 }
 
 /* Responsive */
@@ -667,6 +694,18 @@ main {
 
   .subtitulo-portada {
     font-size: 0.95rem;
+  }
+
+  /* Footer */
+
+  .pie-contenedor {
+    flex-direction: column;
+  }
+
+  .pie-logo {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
   }
 
   /* Contenido */
