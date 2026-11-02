@@ -5,7 +5,7 @@
   --color-enlace-activo: #2b6cb0;
   --color-texto: #2d3748;
   --color-blanco: #ffffff;
-  --color-error: #e53e3e;
+  --color-error: #c53030;
   --color-primario: #1a365d;
   --color-acento-texto: #b45309;
   --color-exito: #276749;
@@ -454,7 +454,7 @@ main {
 }
 
 .meta-noticia {
-  color: var(--color-acento);
+  color: var(--color-acento-texto);
   font-size: 0.85rem;
   font-weight: 500;
   margin-bottom: 0.75rem;
