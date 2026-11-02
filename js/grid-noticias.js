@@ -1,6 +1,6 @@
 const noticias = [
   {
-    url: "https://picsum.photos/400/250?random=6",
+    url: "assets/grid-noticias/1.avif",
     alt: "Artículo sobre inteligencia artificial",
     titulo: "La inteligencia artificial revoluciona el desarrollo de software",
     subtitulo: "15 de octubre de 2026 | Tecnología",
@@ -8,7 +8,7 @@ const noticias = [
       "Las herramientas de IA están transformando la forma en que los desarrolladores escriben código, ofreciendo sugerencias inteligentes y automatizando tareas repetitiva",
   },
   {
-    url: "https://picsum.photos/400/250?random=7",
+    url: "assets/grid-noticias/2.avif",
     alt: "Novedades en JavaScript",
     titulo: "Novedades de JavaScript para 2026",
     subtitulo: "12 de octubre de 2026 | Programación",
@@ -16,7 +16,7 @@ const noticias = [
       "Conoce las nuevas características que llegarán a JavaScript este año y cómo mejorarán la experiencia de desarrollo.",
   },
   {
-    url: "https://picsum.photos/400/250?random=6",
+    url: "assets/grid-noticias/3.avif",
     alt: "Diseño web responsive",
     titulo: "El diseño responsive sigue siendo fundamental",
     subtitulo: "10 de octubre de 2026 | Desarrollo Web",
@@ -24,7 +24,7 @@ const noticias = [
       "Con la variedad de dispositivos actuales, adaptar los sitios web a diferentes pantallas es más importante que nunca.",
   },
   {
-    url: "https://picsum.photos/400/250?random=7",
+    url: "assets/grid-noticias/4.avif",
     alt: "Ciberseguridad",
     titulo: "Ciberseguridad: tendencias para este año",
     subtitulo: "8 de octubre de 2026 | Seguridad",
@@ -32,7 +32,7 @@ const noticias = [
       "Las amenazas evolucionan constantemente. Conoce las principales tendencias en ciberseguridad para proteger tus aplicaciones.",
   },
   {
-    url: "https://picsum.photos/400/250?random=8",
+    url: "assets/grid-noticias/5.avif",
     alt: "Computación en la nube",
     titulo: "La computación en la nube alcanza nuevos hitos",
     subtitulo: "5 de octubre de 2026 | Cloud",
@@ -40,7 +40,7 @@ const noticias = [
       "Los servicios cloud continúan expandiéndose, ofreciendo soluciones más eficientes y económicas para empresas de todos los tamaños.",
   },
   {
-    url: "https://picsum.photos/400/250?random=9",
+    url: "assets/grid-noticias/6.avif",
     alt: "Aplicaciones móviles",
     titulo: "Desarrollo de aplicaciones móviles multiplataforma",
     subtitulo: "3 de octubre de 2026 | Móvil",
@@ -57,7 +57,7 @@ noticias.forEach((noticia) => {
   tarjeta.classList.add("tarjeta-noticia");
 
   tarjeta.innerHTML = `
-  <img class="imagen-noticia" src="${noticia.url}"  alt="${noticia.alt} ">
+  <img class="imagen-noticia" src="${noticia.url}"  alt="${noticia.alt}">
     <div class="cuerpo-tarjeta">
   <h2 >${noticia.titulo}</h2>
   <p class="meta-noticia"> ${noticia.subtitulo}</p>

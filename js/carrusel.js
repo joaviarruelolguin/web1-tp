@@ -1,22 +1,22 @@
 const imagenesCarrusel = [
   {
-    url: "https://picsum.photos/800/400?random=1",
+    url: "assets/carrusel/1.avif",
     alt: "Imagen destacada de tecnología e innovación digital",
   },
   {
-    url: "https://picsum.photos/800/400?random=2",
+    url: "assets/carrusel/2.avif",
     alt: "Imagen destacada sobre programación y desarrollo de software",
   },
   {
-    url: "https://picsum.photos/800/400?random=3",
+    url: "assets/carrusel/3.avif",
     alt: "Imagen destacada de dispositivos y gadgets tecnológicos",
   },
   {
-    url: "https://picsum.photos/800/400?random=10",
+    url: "assets/carrusel/4.avif",
     alt: "Imagen destacada sobre inteligencia artificial y machine learning",
   },
   {
-    url: "https://picsum.photos/800/400?random=11",
+    url: "assets/carrusel/5.avif",
     alt: "Imagen destacada de computación en la nube y servidores",
   },
 ];
