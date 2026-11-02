@@ -129,14 +129,14 @@ function mostrarResumen(datos) {
     contenidoResumen.appendChild(parrafo);
   });
 
-  formulario.style.display = "none";
-  resumenEnvio.style.display = "block";
+  formulario.hidden = true;
+  resumenEnvio.hidden = false;
 }
 
 function reiniciarFormulario() {
   formulario.reset();
-  formulario.style.display = "block";
-  resumenEnvio.style.display = "none";
+  formulario.hidden = false;
+  resumenEnvio.hidden = true;
   contenidoResumen.innerHTML = "";
 }
 
