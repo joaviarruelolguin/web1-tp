@@ -32,11 +32,13 @@ function actualizarImagen() {
   imagenCarrusel.alt = imagenesCarrusel[indiceActual].alt;
 }
 
+// El resto de la división vuelve a 0 al pasar de la última imagen a la primera.
 function avanzar() {
   indiceActual = (indiceActual + 1) % imagenesCarrusel.length;
   actualizarImagen();
 }
 
+// Se suma el largo del array para evitar un índice negativo al retroceder desde la primera imagen.
 function retroceder() {
   indiceActual =
     (indiceActual - 1 + imagenesCarrusel.length) % imagenesCarrusel.length;

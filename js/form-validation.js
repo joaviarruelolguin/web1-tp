@@ -4,10 +4,13 @@ const resumenEnvio = document.getElementById("resumen-envio");
 const contenidoResumen = document.getElementById("contenido-resumen");
 const botonNuevoEnvio = document.getElementById("boton-nuevo-envio");
 
-// Expresiones regulares para validación
+// Texto antes de la @, dominio y una extensión de al menos 2 letras (ej: nombre@dominio.com).
 const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+// Permite dígitos, espacios, guiones, paréntesis y "+" inicial, pero exige entre 7 y 15 dígitos.
 const regexTelefono = /^\+?(?:[\s\-()]*\d){7,15}[\s\-()]*$/;
 
+// Quita espacios al inicio y al final, y reemplaza los espacios repetidos por uno solo.
 function limpiarEspacios(valor) {
   return valor.trim().replace(/\s+/g, " ");
 }
